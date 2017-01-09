@@ -8,3 +8,6 @@ https://github.com/gordonmzhu/beasts/issues/1
 
 ## 3. Creating libraries out of order
 https://github.com/gordonmzhu/beasts/issues/3
+
+## 4. `isPrototypeOf`
+https://github.com/gordonmzhu/beasts/issues/4
