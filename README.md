@@ -1,4 +1,4 @@
-Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb/javascript/tree/es5-deprecated/es5), unless the particular challenge already has its own pre-existing style.
+Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb/javascript/tree/es5-deprecated/es5), unless there's aleady a pre-existing style.
 
 ## 1. [Improving `runWithDebugger`](https://github.com/gordonmzhu/beasts/issues/2)
 
