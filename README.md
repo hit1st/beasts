@@ -4,8 +4,10 @@ Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb
 
 ## 2. [ESC bug in TodoMVC jQuery](https://github.com/gordonmzhu/beasts/issues/5)
 
-## 3. [`librarySystem` with dependencies](https://github.com/gordonmzhu/beasts/issues/1)
+## 3. [A render that doesn't lie](https://github.com/gordonmzhu/beasts/issues/6)
 
-## 4. [Creating libraries out of order](https://github.com/gordonmzhu/beasts/issues/3)
+## 4. [`librarySystem` with dependencies](https://github.com/gordonmzhu/beasts/issues/1)
 
-## 5. [`isPrototypeOf`](https://github.com/gordonmzhu/beasts/issues/4)
+## 5. [Creating libraries out of order](https://github.com/gordonmzhu/beasts/issues/3)
+
+## 6. [`isPrototypeOf`](https://github.com/gordonmzhu/beasts/issues/4)
