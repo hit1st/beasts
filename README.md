@@ -4,7 +4,7 @@ Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb
 
 ## 2. [ESC bug in TodoMVC jQuery](https://github.com/gordonmzhu/beasts/issues/5)
 
-## 3. [A render that doesn't lie](https://github.com/gordonmzhu/beasts/issues/6)
+## 3. [A `render` that doesn't lie](https://github.com/gordonmzhu/beasts/issues/6)
 
 ## 4. [`librarySystem` with dependencies](https://github.com/gordonmzhu/beasts/issues/1)
 
