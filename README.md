@@ -11,3 +11,5 @@ Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb
 ## 5. [Creating libraries out of order](https://github.com/gordonmzhu/beasts/issues/3)
 
 ## 6. [`isPrototypeOf`](https://github.com/gordonmzhu/beasts/issues/4)
+
+## 7. [A twist on `toFixed`](https://github.com/gordonmzhu/beasts/issues/7)
