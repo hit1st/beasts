@@ -12,4 +12,4 @@ Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb
 
 ## 6. [`isPrototypeOf`](https://github.com/gordonmzhu/beasts/issues/4)
 
-## 7. [A twist on `toFixed`](https://github.com/gordonmzhu/beasts/issues/7)
+## 7. [A twist on `accounting.toFixed`](https://github.com/gordonmzhu/beasts/issues/7)
