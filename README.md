@@ -2,14 +2,12 @@ Each challenge should adhere to [Airbnb's style guide](https://github.com/airbnb
 
 ## 1. [Improving `runWithDebugger`](https://github.com/gordonmzhu/beasts/issues/2)
 
-## 2. [ESC bug in TodoMVC jQuery](https://github.com/gordonmzhu/beasts/issues/5)
+## 2. [A `render` that doesn't lie](https://github.com/gordonmzhu/beasts/issues/6)
 
-## 3. [A `render` that doesn't lie](https://github.com/gordonmzhu/beasts/issues/6)
+## 3. [`librarySystem` with dependencies](https://github.com/gordonmzhu/beasts/issues/1)
 
-## 4. [`librarySystem` with dependencies](https://github.com/gordonmzhu/beasts/issues/1)
+## 4. [Creating libraries out of order](https://github.com/gordonmzhu/beasts/issues/3)
 
-## 5. [Creating libraries out of order](https://github.com/gordonmzhu/beasts/issues/3)
+## 5. [`isPrototypeOf`](https://github.com/gordonmzhu/beasts/issues/4)
 
-## 6. [`isPrototypeOf`](https://github.com/gordonmzhu/beasts/issues/4)
-
-## 7. [A twist on `accounting.toFixed`](https://github.com/gordonmzhu/beasts/issues/7)
+## 6. [A twist on `accounting.toFixed`](https://github.com/gordonmzhu/beasts/issues/7)
