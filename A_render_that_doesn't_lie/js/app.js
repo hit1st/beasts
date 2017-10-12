@@ -35,7 +35,7 @@ jQuery(function ($) {
 				var store = localStorage.getItem(namespace);
 				return (store && JSON.parse(store)) || [];
 			}
-		}
+		},
 	};
 
 	var App = {
@@ -48,7 +48,7 @@ jQuery(function ($) {
 			new Router({
 				'/:filter': function (filter) {
 					this.filter = filter;
-					this.render();
+					view.render();
 				}.bind(this)
 			}).init('/all');
 		},
@@ -63,26 +63,6 @@ jQuery(function ($) {
 				.on('focusout', '.edit', this.update.bind(this))
 				.on('click', '.destroy', this.destroy.bind(this));
 		},
-		render: function () {
-			var todos = this.getFilteredTodos();
-			$('#todo-list').html(this.todoTemplate(todos));
-			$('#main').toggle(todos.length > 0);
-			$('#toggle-all').prop('checked', this.getActiveTodos().length === 0);
-			this.renderFooter();
-			$('#new-todo').focus();
-		},
-		renderFooter: function () {
-			var todoCount = this.todos.length;
-			var activeTodoCount = this.getActiveTodos().length;
-			var template = this.footerTemplate({
-				activeTodoCount: activeTodoCount,
-				activeTodoWord: util.pluralize(activeTodoCount, 'item'),
-				completedTodos: todoCount - activeTodoCount,
-				filter: this.filter
-			});
-
-			$('#footer').toggle(todoCount > 0).html(template);
-		},
 		toggleAll: function (e) {
 			var isChecked = $(e.target).prop('checked');
 
@@ -91,7 +71,7 @@ jQuery(function ($) {
 			});
 
       this.saveTodos();
-			this.render();
+			view.render();
 		},
 		getActiveTodos: function () {
 			return this.todos.filter(function (todo) {
@@ -118,7 +98,7 @@ jQuery(function ($) {
 			this.todos = this.getActiveTodos();
       this.filter = 'all';
       this.saveTodos();
-			this.render();
+			view.render();
 		},
 		// accepts an element from inside the `.item` div and
 		// returns the corresponding index in the `todos` array
@@ -149,7 +129,7 @@ jQuery(function ($) {
 
       $input.val('');
       this.saveTodos();
-			this.render();
+			view.render();
     },
     saveTodos: function() {
       util.store('todos-jquery', this.todos);
@@ -158,7 +138,7 @@ jQuery(function ($) {
 			var i = this.indexFromEl(e.target);
       this.todos[i].completed = !this.todos[i].completed;
       this.saveTodos();
-			this.render();
+			view.render();
 		},
 		edit: function (e) {
 			var $input = $(e.target).closest('li').addClass('editing').find('.edit');
@@ -190,13 +170,36 @@ jQuery(function ($) {
 			}
 
       this.saveTodos();
-			this.render();
+			view.render();
 		},
 		destroy: function (e) {
       this.todos.splice(this.indexFromEl(e.target), 1);
       this.saveTodos();
-			this.render();
-		}
+			view.render();
+		},
+	};
+
+	var view = {
+		render: function () {
+			var todos = App.getFilteredTodos();
+			$('#todo-list').html(App.todoTemplate(todos));
+			$('#main').toggle(todos.length > 0);
+			$('#toggle-all').prop('checked', App.getActiveTodos().length === 0);
+			this.renderFooter();
+			$('#new-todo').focus();
+		},
+		renderFooter: function () {
+			var todoCount = App.todos.length;
+			var activeTodoCount = App.getActiveTodos().length;
+			var template = App.footerTemplate({
+				activeTodoCount: activeTodoCount,
+				activeTodoWord: util.pluralize(activeTodoCount, 'item'),
+				completedTodos: todoCount - activeTodoCount,
+				filter: App.filter
+			});
+
+			$('#footer').toggle(todoCount > 0).html(template);
+		},
 	};
 
 	App.init();
